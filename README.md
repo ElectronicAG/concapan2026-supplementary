@@ -1,6 +1,6 @@
 # Supplementary Material — CONCAPAN 2026
 
-Supplementary material for the paper **"Power Consumption Characterization of Planar MOSFET and FinFET Technologies Across Nanometer Nodes: A Comparative HSPICE Study"** (Group 04, IEEE CONCAPAN 2026).
+Supplementary material for the paper **"Power Consumption Characterization of Planar MOSFET and FinFET Technologies Across Nanometer Nodes: A Comparative HSPICE Study"** (IEEE CONCAPAN 2026).
 
 Includes the MATLAB scripts used to generate the power surfaces, the raw simulation data (HSPICE), and the resulting figures.
 
