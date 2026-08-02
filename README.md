@@ -1,56 +1,56 @@
 # Supplementary Material — CONCAPAN 2026
 
-Material complementario del paper **"Power Consumption Characterization of Planar MOSFET and FinFET Technologies Across Nanometer Nodes: A Comparative HSPICE Study"** (Grupo 04, IEEE CONCAPAN 2026).
+Supplementary material for the paper **"Power Consumption Characterization of Planar MOSFET and FinFET Technologies Across Nanometer Nodes: A Comparative HSPICE Study"** (Group 04, IEEE CONCAPAN 2026).
 
-Incluye los scripts de MATLAB usados para generar las superficies de potencia, los datos crudos de simulación (HSPICE) y las figuras resultantes.
+Includes the MATLAB scripts used to generate the power surfaces, the raw simulation data (HSPICE), and the resulting figures.
 
-## Estructura del repositorio
+## Repository structure
 
 ```
 ├── matlab/
-│   ├── graficar_simulaciones_temp.m   # genera superficies de potencia vs. temperatura
-│   ├── graficar_simulaciones_volt.m   # genera superficies de potencia vs. voltaje
-│   └── xlsx_to_mat.py                 # convierte .xlsx crudo a .mat
+│   ├── graficar_simulaciones_temp.m   # generates power surfaces vs. temperature
+│   ├── graficar_simulaciones_volt.m   # generates power surfaces vs. voltage
+│   └── xlsx_to_mat.py                 # converts raw .xlsx to .mat
 ├── data/
 │   ├── Simulaciones_MUX.mat / .xlsx
 │   ├── Simulaciones_Adder.mat / .xlsx
 │   └── Simulaciones_Multiplicador.mat / .xlsx
 ├── figures/
-│   ├── TEMP/   # superficies de potencia vs. temperatura (por circuito)
-│   └── VOLT/   # superficies de potencia vs. voltaje (por circuito)
+│   ├── TEMP/   # power surfaces vs. temperature (per circuit)
+│   └── VOLT/   # power surfaces vs. voltage (per circuit)
 └── requirements.txt
 ```
 
-## Circuitos simulados
+## Simulated circuits
 
-- Multiplexor 2:1
-- Sumador ripple-carry de 3 bits
-- Multiplicador secuencial de 3 bits
+- 2:1 multiplexer
+- 3-bit ripple-carry adder
+- 3-bit sequential multiplier
 
-Cada uno simulado en HSPICE bajo barridos de voltaje (0.9 V–1.3 V) y temperatura (–40 °C a 80 °C), en tecnologías planar MOSFET (130 nm–22 nm) y FinFET (20 nm–7 nm).
+Each simulated in HSPICE under voltage sweeps (0.9 V–1.3 V) and temperature sweeps (–40 °C to 80 °C), across planar MOSFET (130 nm–22 nm) and FinFET (20 nm–7 nm) technologies.
 
-## Requisitos
+## Requirements
 
-- MATLAB (probado en R2023b o superior)
-- Python 3.x con dependencias en `requirements.txt` (solo necesario si se regenera `.mat` desde `.xlsx`)
+- MATLAB (tested on R2023b or later)
+- Python 3.x with dependencies in `requirements.txt` (only needed to regenerate `.mat` from `.xlsx`)
 
-## Uso
+## Usage
 
-1. Clonar el repo.
-2. Correr `graficar_simulaciones_volt.m` o `graficar_simulaciones_temp.m` desde `matlab/`, apuntando a los `.mat` en `data/`.
-3. Las figuras se guardan en `figures/VOLT/` o `figures/TEMP/` según corresponda.
+1. Clone the repo.
+2. Run `graficar_simulaciones_volt.m` or `graficar_simulaciones_temp.m` from `matlab/`, pointing to the `.mat` files in `data/`.
+3. Figures are saved to `figures/VOLT/` or `figures/TEMP/` accordingly.
 
-Para regenerar los `.mat` desde los `.xlsx` originales:
+To regenerate the `.mat` files from the original `.xlsx` files:
 
 ```bash
 pip install -r requirements.txt
 python matlab/xlsx_to_mat.py
 ```
 
-## Cita
+## Citation
 
-Si usás este material, citar el paper original (CONCAPAN 2026, Grupo 04) — referencia completa disponible una vez publicado el proceedings.
+If you use this material, please cite the original paper (CONCAPAN 2026, Group 04) — full reference available once the proceedings are published.
 
-## Licencia
+## License
 
-Pendiente de definir (sugerido: MIT para código, CC-BY para datos/figuras).
+To be determined (suggested: MIT for code, CC-BY for data/figures).
