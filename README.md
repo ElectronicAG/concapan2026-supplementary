@@ -47,10 +47,4 @@ pip install -r requirements.txt
 python matlab/xlsx_to_mat.py
 ```
 
-## Citation
 
-If you use this material, please cite the original paper (CONCAPAN 2026, Group 04) — full reference available once the proceedings are published.
-
-## License
-
-To be determined (suggested: MIT for code, CC-BY for data/figures).
